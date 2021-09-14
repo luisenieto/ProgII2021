@@ -15,12 +15,20 @@ public class Espacio {
     private String tipo;
     private boolean habilitado;
 
-    public Espacio(String n, int c, String t, boolean h) {
-        nombre = n;
-        capacidad = c;
-        tipo = t;
-        habilitado = h;
+    public Espacio(String nombre, int capacidad, String tipo, boolean habilitado) {
+        this.nombre = nombre;
+        this.capacidad = capacidad;
+        this.tipo = tipo;
+        this.habilitado = habilitado;
     }
+    
+    public Espacio(String n, int c, boolean h) {
+        this(n, c, "Aula", h);        
+    }
+    
+    public Espacio(String n, int c, String t) {
+        this(n, c, t, true);
+    }    
     
     
     
@@ -72,5 +80,14 @@ public class Espacio {
         this.habilitado = habilitado;
     }
     
+    public void mostrar() {
+        System.out.println(this.nombre + ", " + this.capacidad + ", " + this.tipo);
+    }
     
+    public void mostrar(boolean mostrarHabilitado) {
+        if (mostrarHabilitado)
+            System.out.println(nombre + ", " + capacidad + ", " + tipo + ", habilitado: " + habilitado);
+        else
+            this.mostrar();
+    }
 }
