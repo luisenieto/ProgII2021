@@ -5,7 +5,10 @@
         <group>
             <file>file:/root/Documentos/UNT/Programación%20II/Ejemplos/ProgII2021/src/espacios/modelos/Espacio.java</file>
             <file>file:/root/Documentos/UNT/Programación%20II/Ejemplos/ProgII2021/src/principal/Principal.java</file>
-            <file>file:/root/Documentos/UNT/Programación%20II/Ejemplos/ProgII2021/src/espacios/modelos/Principal.java</file>
+            <file>file:/root/Documentos/UNT/Programación%20II/Ejemplos/ProgII2021/src/espacios/modelos/Composicion.java</file>
+            <file>file:/root/Documentos/UNT/Programación%20II/Ejemplos/ProgII2021/src/asignaturas/modelos/Asignatura.java</file>
+            <file>file:/root/Documentos/UNT/Programación%20II/Ejemplos/ProgII2021/src/recursos/modelos/Recurso.java</file>
+            <file>file:/root/Documentos/UNT/Programación%20II/Ejemplos/ProgII2021/src/personas/modelos/Docente.java</file>
         </group>
     </open-files>
 </project-private>

@@ -16,7 +16,7 @@ public class Asignatura {
     private int codigo;
     private String nombre;
     private ArrayList<Docente> docentes;
-
+    
     public int getCodigo() {
         return codigo;
     }
@@ -33,22 +33,13 @@ public class Asignatura {
         this.nombre = nombre;
     }
 
-    public Asignatura(int codigo, String nombre) {
-        this.codigo = codigo;
-        this.nombre = nombre;
-        this.docentes = new ArrayList<>();
-    }
-    
-    public void agregarDocente(Docente d) {        
-        this.docentes.add(d);
-        //d.agregarAsignatura(this);
-    }
-    
     public void mostrar() {
         System.out.println("Código: " + this.codigo + " nombre: " + this.nombre);
-        for(Docente d : this.docentes) {
-            System.out.println(d.getApellido() + ", " + d.getNombre());
-        }
+    }
+    
+    @Override
+    public String toString() {
+        return nombre + " " + codigo;
     }
     
 }

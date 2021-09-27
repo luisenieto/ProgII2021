@@ -42,32 +42,16 @@ public class Docente {
         this.legajo = legajo;
     }
 
-    public ArrayList<Asignatura> getAsignaturas() {
-        return asignaturas;
-    }
-
-    public void setAsignaturas(ArrayList<Asignatura> asignaturas) {
-        this.asignaturas = asignaturas;
-    }
-
     public Docente(String nombre, String apellido, int legajo) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.legajo = legajo;
-        this.asignaturas = new ArrayList<>();
     }
     
-    public void agregarAsignatura(Asignatura a) {
-        this.asignaturas.add(a);
-        //a.agregarDocente(this);
-    }
-    
+  
     
     public void mostrar() {
         System.out.println(this.apellido + ", " + this.nombre);
-        for(Asignatura a : this.asignaturas) {
-            System.out.println(a.getNombre());
-        }
     }
     
 }

@@ -5,6 +5,9 @@
  */
 package espacios.modelos;
 
+import java.util.ArrayList;
+import recursos.modelos.Recurso;
+
 /**
  *
  * @author root
@@ -14,6 +17,7 @@ public class Espacio {
     private int capacidad;
     private String tipo;
     private boolean habilitado;
+    private ArrayList<Composicion> composiciones = new ArrayList<>();
 
     public Espacio(String nombre, int capacidad, String tipo, boolean habilitado) {
         this.nombre = nombre;
@@ -89,5 +93,10 @@ public class Espacio {
             System.out.println(nombre + ", " + capacidad + ", " + tipo + ", habilitado: " + habilitado);
         else
             this.mostrar();
+    }
+    
+    public void agregarRecurso(Recurso r, int cantidad) {
+        Composicion c = new Composicion(r, cantidad);
+        this.composiciones.add(c);
     }
 }
