@@ -20,7 +20,7 @@ public class Principal1 {
 //        ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 //        ventana.setVisible(true);
 
-        VentanaJFrame ventanaJFrame = new VentanaJFrame();
+//        VentanaJFrame ventanaJFrame = new VentanaJFrame();
 //        ventana.setLocationRelativeTo(null);
 //        ventana.setVisible(true);
 //        int opcion = JOptionPane.showConfirmDialog(null,
@@ -47,7 +47,10 @@ public class Principal1 {
 //        else
 //            System.out.println("Se eligió No");
         
-        VentanaJDialog ventanaJDialog = new VentanaJDialog(ventanaJFrame, false);
+//        VentanaJDialog ventanaJDialog = new VentanaJDialog(ventanaJFrame, false);
+
+//        VentanaAEspacio ventana = new VentanaAEspacio();
+        VentanaADocente ventana = new VentanaADocente();
         
     }    
 }

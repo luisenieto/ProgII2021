@@ -16,6 +16,7 @@ public class Docente {
     private String nombre;
     private String apellido;
     private int legajo;
+    private Cargo cargo;
     private ArrayList<Asignatura> asignaturas;
 
     public String getNombre() {
@@ -42,16 +43,17 @@ public class Docente {
         this.legajo = legajo;
     }
 
-    public Docente(String nombre, String apellido, int legajo) {
+    public Docente(String nombre, String apellido, int legajo, Cargo cargo) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.legajo = legajo;
+        this.cargo = cargo;
     }
     
   
     
     public void mostrar() {
-        System.out.println(this.apellido + ", " + this.nombre);
+        System.out.println(this.apellido + ", " + this.nombre + " " + this.cargo);
     }
     
 }
