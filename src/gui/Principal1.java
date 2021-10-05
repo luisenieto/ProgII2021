@@ -5,7 +5,7 @@
  */
 package gui;
 
-import javax.swing.JOptionPane;
+import javax.swing.UIManager;
 
 /**
  *
@@ -50,7 +50,24 @@ public class Principal1 {
 //        VentanaJDialog ventanaJDialog = new VentanaJDialog(ventanaJFrame, false);
 
 //        VentanaAEspacio ventana = new VentanaAEspacio();
+        asignarLookAndFeel("Nimbus");
         VentanaADocente ventana = new VentanaADocente();
         
+    }
+
+    public static void asignarLookAndFeel(String laf) {
+        try {
+            for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
+                if (laf.equals(info.getName())) {
+                    UIManager.setLookAndFeel(info.getClassName());
+                }
+            }
+        } catch (Exception e) {
+            try {
+                UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+            } 
+            catch (Exception e2) {
+            }
+        }
     }    
 }

@@ -11,8 +11,8 @@ import javax.swing.DefaultComboBoxModel;
  *
  * @author root
  */
-public class ModeloComboCargos extends DefaultComboBoxModel {
-    public ModeloComboCargos() {
+public class ModeloComboCargos extends DefaultComboBoxModel {        
+    public ModeloComboCargos() {               
         for(Cargo cargo : Cargo.values()) {
             this.addElement(cargo);
         }

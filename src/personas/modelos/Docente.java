@@ -43,6 +43,16 @@ public class Docente {
         this.legajo = legajo;
     }
 
+    public Cargo getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(Cargo cargo) {
+        this.cargo = cargo;
+    }
+    
+    
+
     public Docente(String nombre, String apellido, int legajo, Cargo cargo) {
         this.nombre = nombre;
         this.apellido = apellido;
