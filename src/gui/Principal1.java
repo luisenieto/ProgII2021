@@ -6,6 +6,8 @@
 package gui;
 
 import javax.swing.UIManager;
+import personas.modelos.Cargo;
+import personas.modelos.Docente;
 
 /**
  *
@@ -50,8 +52,11 @@ public class Principal1 {
 //        VentanaJDialog ventanaJDialog = new VentanaJDialog(ventanaJFrame, false);
 
 //        VentanaAEspacio ventana = new VentanaAEspacio();
-        asignarLookAndFeel("Nimbus");
-        VentanaADocente ventana = new VentanaADocente();
+//        asignarLookAndFeel("Nimbus");
+//        VentanaADocente ventana = new VentanaADocente();
+
+        Docente d = new Docente("Nombre", "Apellido", 1, Cargo.ADG);
+        d.mostrar();
         
     }
 

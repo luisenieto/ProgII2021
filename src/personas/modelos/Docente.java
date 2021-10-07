@@ -7,41 +7,18 @@ package personas.modelos;
 
 import asignaturas.modelos.Asignatura;
 import java.util.ArrayList;
+import personas.modelos.Cargo;
+import personas.modelos.Cargo;
+import personas.modelos.Personal;
+import personas.modelos.Personal;
 
 /**
  *
  * @author root
  */
-public class Docente {
-    private String nombre;
-    private String apellido;
-    private int legajo;
+public class Docente extends Personal {
     private Cargo cargo;
     private ArrayList<Asignatura> asignaturas;
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public int getLegajo() {
-        return legajo;
-    }
-
-    public void setLegajo(int legajo) {
-        this.legajo = legajo;
-    }
 
     public Cargo getCargo() {
         return cargo;
@@ -50,20 +27,25 @@ public class Docente {
     public void setCargo(Cargo cargo) {
         this.cargo = cargo;
     }
-    
-    
 
     public Docente(String nombre, String apellido, int legajo, Cargo cargo) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.legajo = legajo;
-        this.cargo = cargo;
+        super(nombre, apellido, legajo);
+        this.cargo = cargo;        
     }
     
-  
+    public void asignarNombre(String n) {
+        this.setNombre(n);
+    }
     
     public void mostrar() {
-        System.out.println(this.apellido + ", " + this.nombre + " " + this.cargo);
+        //System.out.println(this.nombre + ", " + this.apellido + " " + this.legajo);
+    }
+    
+    //@Override
+    public int mostrar(int x) {        
+        System.out.println(this.cargo);
+        //super.mostrar();
+        return 0;
     }
     
 }

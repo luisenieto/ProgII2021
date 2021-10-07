@@ -37,7 +37,7 @@ public class Principal {
 //        e3.mostrar(true);
         
        
-        Docente d1 = new Docente("Juan", "Pérez", 1);
+//        Docente d1 = new Docente("Juan", "Pérez", 1);
 //        Asignatura a1 = new Asignatura(1, "Cálculo I");
 //        a1.agregarDocente(d1);
 //        d1.agregarAsignatura(a1);
