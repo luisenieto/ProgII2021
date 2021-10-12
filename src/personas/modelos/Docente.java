@@ -35,17 +35,16 @@ public class Docente extends Personal {
     
     public void asignarNombre(String n) {
         this.setNombre(n);
-    }
-    
+    }  
+           
+    @Override
     public void mostrar() {
-        //System.out.println(this.nombre + ", " + this.apellido + " " + this.legajo);
+        super.mostrar();        
+        System.out.println(this.cargo);    
     }
-    
-    //@Override
-    public int mostrar(int x) {        
-        System.out.println(this.cargo);
-        //super.mostrar();
-        return 0;
+   
+    public void mostrarDocente() {
+        System.out.println("(" + this.getLegajo() + ") - " + this.getApellido() + ", " + this.getNombre());
     }
     
 }

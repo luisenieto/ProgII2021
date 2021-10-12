@@ -5,9 +5,15 @@
  */
 package gui;
 
+import asignaturas.modelos.Asignatura;
+import espacios.modelos.Espacio;
+import java.util.ArrayList;
 import javax.swing.UIManager;
 import personas.modelos.Cargo;
 import personas.modelos.Docente;
+import personas.modelos.NoDocente;
+import personas.modelos.Personal;
+import recursos.modelos.Recurso;
 
 /**
  *
@@ -15,6 +21,14 @@ import personas.modelos.Docente;
  */
 public class Principal1 {
     public static void main(String[] args) {
+//        ArrayList<Docente> docentes = new ArrayList<>();
+//        ArrayList<NoDocente> nodocentes = new ArrayList<>();
+        ArrayList<Personal> personal = new ArrayList<>();
+        ArrayList<Recurso> recursos = new ArrayList<>();
+        
+        
+        
+        
 //        JFrame ventana = new JFrame("Ventana JFrame");
 //        ventana.setSize(300, 400);
 //        ventana.setResizable(false);
@@ -55,9 +69,42 @@ public class Principal1 {
 //        asignarLookAndFeel("Nimbus");
 //        VentanaADocente ventana = new VentanaADocente();
 
-        Docente d = new Docente("Nombre", "Apellido", 1, Cargo.ADG);
-        d.mostrar();
-        
+//        Docente d = new Docente("Nombre", "Apellido", 1, Cargo.ADG);
+//        d.mostrar();
+
+//            personal.add(new Docente("Nombre1", "Apellido1", 1, Cargo.ADG));
+//            personal.add(new Docente("Nombre2", "Apellido2", 2, Cargo.ADG));
+//            
+//            personal.add(new NoDocente("Nombre3", "Apellido3", 3));
+//            personal.add(new NoDocente("Nombre4", "Apellido4", 4));
+            
+//          for(Docente d : docentes) {
+//              d.mostrar();
+//          }
+//          
+//          for(NoDocente nd : nodocentes) {
+//              nd.mostrar();
+//          }
+
+//            for(Personal p : personal) {
+//                p.mostrar();
+//            }
+            
+            Recurso r1 = new Recurso("Ventilador");
+            Recurso r2 = new Recurso("ventilador");
+            
+            recursos.add(r1);
+            if(!recursos.contains(r2))
+                recursos.add(r2);
+            
+            for(Recurso r : recursos)
+                r.mostrar();
+            
+//            if (r1.equals(r2))
+//                System.out.println("Iguales");
+//            else
+//                System.out.println("Distintos");
+            
     }
 
     public static void asignarLookAndFeel(String laf) {
