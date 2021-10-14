@@ -90,21 +90,69 @@ public class Principal1 {
 //                p.mostrar();
 //            }
             
-            Recurso r1 = new Recurso("Ventilador");
-            Recurso r2 = new Recurso("ventilador");
-            
-            recursos.add(r1);
-            if(!recursos.contains(r2))
-                recursos.add(r2);
-            
-            for(Recurso r : recursos)
-                r.mostrar();
+//            Recurso r1 = new Recurso("Ventilador");
+//            Recurso r2 = new Recurso("ventilador");
+//            
+//            recursos.add(r1);
+//            if(!recursos.contains(r2))
+//                recursos.add(r2);
+//            
+//            for(Recurso r : recursos)
+//                r.mostrar();
             
 //            if (r1.equals(r2))
 //                System.out.println("Iguales");
 //            else
 //                System.out.println("Distintos");
-            
+
+//            personal.add(new Docente("Nombre1", "Apellido1", 1, Cargo.ADG));
+//            personal.add(new Docente("Nombre2", "Apellido2", 2, Cargo.ADG));
+//            
+//            personal.add(new NoDocente("Nombre3", "Apellido3", 3));
+//            personal.add(new NoDocente("Nombre4", "Apellido4", 4));
+//            
+//            for(Personal p : personal) {
+//                p.mostrar();
+//                System.out.println(p.queSoy());
+//            }
+
+        Personal p1 = new Docente("Nombre1", "Apellido1", 1, Cargo.ADG);
+        Personal p2 = new Docente("Nombre2", "Apellido2", 2, Cargo.ADG);
+        Personal p3 = new Docente("Nombre3", "Apellido3", 1, Cargo.ADG);
+        
+        Personal p4 = new NoDocente("Nombre4", "Apellido4", 4, "4");
+        Personal p5 = new NoDocente("Nombre5", "Apellido5", 5, "5");
+        Personal p6 = new NoDocente("Nombre6", "Apellido6", 4, "6");
+        
+        Personal p7 = new Docente("Nombre7", "Apellido7", 4, Cargo.ADG);
+        Personal p8 = new NoDocente("Nombre8", "Apellido8", 1, "8");
+        
+        Personal p9 = new NoDocente("Nombre9", "Apellido9", 9, "4");
+
+        
+        if (!personal.contains(p1))
+            personal.add(p1);
+        if (!personal.contains(p2))
+            personal.add(p2);
+        if (!personal.contains(p3))
+            personal.add(p3);
+        if (!personal.contains(p4))
+            personal.add(p4);
+        if (!personal.contains(p5))
+            personal.add(p5);
+        if (!personal.contains(p6))
+            personal.add(p6);
+        if (!personal.contains(p7))
+            personal.add(p7);
+        if (!personal.contains(p8))
+            personal.add(p8);
+        if (!personal.contains(p9))
+            personal.add(p9);
+        
+        for(Personal p : personal) {
+            p.mostrar();
+            System.out.println();
+        }
     }
 
     public static void asignarLookAndFeel(String laf) {

@@ -47,4 +47,8 @@ public class Docente extends Personal {
         System.out.println("(" + this.getLegajo() + ") - " + this.getApellido() + ", " + this.getNombre());
     }
     
+    @Override
+    public String queSoy() {
+        return "soy un docente";
+    }
 }

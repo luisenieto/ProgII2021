@@ -9,7 +9,7 @@ package personas.modelos;
  *
  * @author root
  */
-public class Personal {
+public abstract class Personal {
     private String nombre;
     private String apellido;
     private int legajo;
@@ -63,10 +63,10 @@ public class Personal {
         if (obj == null) {
             return false;
         }
-        if (getClass() != obj.getClass()) {
+        if (getClass().getSuperclass() != obj.getClass().getSuperclass()) {
             return false;
         }
-        final Personal other = (Personal) obj;
+        Personal other = (Personal) obj;
         if (this.legajo != other.legajo) {
             return false;
         }
@@ -74,5 +74,6 @@ public class Personal {
     }
     
     
-        
+    public abstract String queSoy();
+
 }
