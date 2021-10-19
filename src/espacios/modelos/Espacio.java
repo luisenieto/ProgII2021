@@ -5,8 +5,10 @@
  */
 package espacios.modelos;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Objects;
+import personas.modelos.Docente;
 import recursos.modelos.Recurso;
 
 /**
@@ -130,5 +132,25 @@ public class Espacio {
         return true;
     }
     
+    public String nuevoTurno(LocalDateTime desde, LocalDateTime hasta, Docente d) {
+        if (this.habilitado) { //el espacio está habilitado
+            //
+            return "Se creó un nuevo turno";
+        }
+        else
+            return "No se puede crear un turno porque está deshabilitado";
+    }
     
+    public static void prueba() {
+        
+    }
+    
+    public static void prueba(int x) {
+        
+    }
+    
+    
+    public static void prueba(int x, int y) {
+        
+    }
 }

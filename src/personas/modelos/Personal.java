@@ -75,5 +75,9 @@ public abstract class Personal {
     
     
     public abstract String queSoy();
+    
+    public static void prueba() {
+        System.out.println("Prueba en Personal");
+    }
 
 }

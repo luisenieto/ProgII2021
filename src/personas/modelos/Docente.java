@@ -45,10 +45,15 @@ public class Docente extends Personal {
    
     public void mostrarDocente() {
         System.out.println("(" + this.getLegajo() + ") - " + this.getApellido() + ", " + this.getNombre());
+        prueba();
     }
     
     @Override
     public String queSoy() {
         return "soy un docente";
+    }
+    
+    public static void prueba() {
+        System.out.println("Prueba en Docente");
     }
 }

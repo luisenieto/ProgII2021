@@ -5,14 +5,13 @@
  */
 package gui;
 
-import asignaturas.modelos.Asignatura;
-import espacios.modelos.Espacio;
 import java.util.ArrayList;
 import javax.swing.UIManager;
 import personas.modelos.Cargo;
 import personas.modelos.Docente;
 import personas.modelos.NoDocente;
 import personas.modelos.Personal;
+import recursos.modelos.GestorRecursos;
 import recursos.modelos.Recurso;
 
 /**
@@ -129,30 +128,45 @@ public class Principal1 {
         
         Personal p9 = new NoDocente("Nombre9", "Apellido9", 9, "4");
 
+//        if(p1.equals(p4))
+//            System.out.println("son iguales");
         
-        if (!personal.contains(p1))
-            personal.add(p1);
-        if (!personal.contains(p2))
-            personal.add(p2);
-        if (!personal.contains(p3))
-            personal.add(p3);
-        if (!personal.contains(p4))
-            personal.add(p4);
-        if (!personal.contains(p5))
-            personal.add(p5);
-        if (!personal.contains(p6))
-            personal.add(p6);
-        if (!personal.contains(p7))
-            personal.add(p7);
-        if (!personal.contains(p8))
-            personal.add(p8);
-        if (!personal.contains(p9))
-            personal.add(p9);
+//        if (!personal.contains(p1))
+//            personal.add(p1);
+//        if (!personal.contains(p2))
+//            personal.add(p2);
+//        if (!personal.contains(p3))
+//            personal.add(p3);
+//        if (!personal.contains(p4))
+//            personal.add(p4);
+//        if (!personal.contains(p5))
+//            personal.add(p5);
+//        if (!personal.contains(p6))
+//            personal.add(p6);
+//        if (!personal.contains(p7))
+//            personal.add(p7);
+//        if (!personal.contains(p8))
+//            personal.add(p8);
+//        if (!personal.contains(p9))
+//            personal.add(p9);
+//        
+//        for(Personal p : personal) {
+//            p.mostrar();
+//            System.out.println();
+//        }
+
+//        Docente.prueba();
+        GestorRecursos gr = GestorRecursos.instanciar();
+        System.out.println(gr.crearRecurso("Ventilador"));
+        System.out.println(gr.crearRecurso(""));
+        System.out.println(gr.crearRecurso(null));
+        System.out.println(gr.crearRecurso("Ventilador"));
+        System.out.println(gr.crearRecurso("Pizarrón"));
+        gr.mostrarRecursos();
         
-        for(Personal p : personal) {
-            p.mostrar();
-            System.out.println();
-        }
+        GestorRecursos gr2 = GestorRecursos.instanciar();
+        System.out.println(gr2.crearRecurso("Ventilador"));
+        gr2.mostrarRecursos();
     }
 
     public static void asignarLookAndFeel(String laf) {
