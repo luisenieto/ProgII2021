@@ -5,43 +5,54 @@
  */
 package recursos.modelos;
 
+import interfaces.IGestorRecursos;
 import java.util.ArrayList;
 
 /**
  *
  * @author root
  */
-public class GestorRecursos {
+public class GestorRecursos implements IGestorRecursos {
     private ArrayList<Recurso> recursos = new ArrayList<>();
+    private static GestorRecursos instancia;
     
-    
-    private static GestorRecursos variable;    
     private GestorRecursos() {
         
-    }    
-    public static GestorRecursos instanciar() {
-        if(variable == null)
-            variable = new GestorRecursos();
-        return variable;
     }
     
-    public String crearRecurso(String nombre) {
+    public static GestorRecursos instanciar() {
+        if (instancia == null)
+            instancia = new GestorRecursos();
+        return instancia;
+    }
+    
+//    private Recurso[] recursos = new Recurso[100];
+    
+    @Override
+    public String nuevoRecurso(String nombre) {
         if ((nombre != null) && (!nombre.isEmpty())) {
             Recurso r = new Recurso(nombre);
             if(!this.recursos.contains(r)) {
                 this.recursos.add(r);
-                return "Recurso creado y guardado";
+                return EXITO;
             }
             else
-                return "Ya existe un recurso con ese nombre";
+                return RECURSO_DUPLICADO;
         }
         return 
-            "No se pudo crear el recurso porque está mal el nombre";
+            NOMBRE_INCORRECTO;        
+    }
+
+    @Override
+    public void mostrarRecursos() {
+        System.out.println("Recursos");
+        System.out.println("--------");
+        for(int i = 0; i < this.recursos.size(); i++) {
+            Recurso r = this.recursos.get(i);
+            r.mostrar();
+        }
+//        for(Recurso r : this.recursos)
+//            r.mostrar();
     }
     
-    public void mostrarRecursos() {
-        for(Recurso r : this.recursos)
-            r.mostrar();
-    }
-        
 }

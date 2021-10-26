@@ -5,13 +5,14 @@
  */
 package gui;
 
+import interfaces.IGestorRecursos;
 import java.util.ArrayList;
 import javax.swing.UIManager;
 import personas.modelos.Cargo;
 import personas.modelos.Docente;
 import personas.modelos.NoDocente;
 import personas.modelos.Personal;
-import recursos.modelos.GestorRecursos;
+import recursos.modelos.GestorRecursos2;
 import recursos.modelos.Recurso;
 
 /**
@@ -156,17 +157,27 @@ public class Principal1 {
 //        }
 
 //        Docente.prueba();
-        GestorRecursos gr = GestorRecursos.instanciar();
-        System.out.println(gr.crearRecurso("Ventilador"));
-        System.out.println(gr.crearRecurso(""));
-        System.out.println(gr.crearRecurso(null));
-        System.out.println(gr.crearRecurso("Ventilador"));
-        System.out.println(gr.crearRecurso("Pizarrón"));
-        gr.mostrarRecursos();
+        IGestorRecursos gr = GestorRecursos2.instanciar();
+        String resultado = gr.nuevoRecurso("Ventilador");
+        if (resultado.equals(IGestorRecursos.EXITO)) {
+            ////
+        }
+        else if (resultado.equals(IGestorRecursos.RECURSO_DUPLICADO)) {
+            //
+        }
+        else {
+            //
+        }
         
-        GestorRecursos gr2 = GestorRecursos.instanciar();
-        System.out.println(gr2.crearRecurso("Ventilador"));
-        gr2.mostrarRecursos();
+        System.out.println(gr.nuevoRecurso(""));
+        System.out.println(gr.nuevoRecurso(null));
+        System.out.println(gr.nuevoRecurso("Ventilador"));
+        System.out.println(gr.nuevoRecurso("Pizarrón"));
+        gr.mostrarRecursos();
+//        
+//        GestorRecursos gr2 = GestorRecursos.instanciar();
+//        System.out.println(gr2.crearRecurso("Ventilador"));
+//        gr2.mostrarRecursos();
     }
 
     public static void asignarLookAndFeel(String laf) {
