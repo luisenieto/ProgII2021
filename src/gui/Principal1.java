@@ -115,20 +115,20 @@ public class Principal1 {
 //                p.mostrar();
 //                System.out.println(p.queSoy());
 //            }
-
-        Personal p1 = new Docente("Nombre1", "Apellido1", 1, Cargo.ADG);
-        Personal p2 = new Docente("Nombre2", "Apellido2", 2, Cargo.ADG);
-        Personal p3 = new Docente("Nombre3", "Apellido3", 1, Cargo.ADG);
-        
-        Personal p4 = new NoDocente("Nombre4", "Apellido4", 4, "4");
-        Personal p5 = new NoDocente("Nombre5", "Apellido5", 5, "5");
-        Personal p6 = new NoDocente("Nombre6", "Apellido6", 4, "6");
-        
-        Personal p7 = new Docente("Nombre7", "Apellido7", 4, Cargo.ADG);
-        Personal p8 = new NoDocente("Nombre8", "Apellido8", 1, "8");
-        
-        Personal p9 = new NoDocente("Nombre9", "Apellido9", 9, "4");
-
+//***
+//        Personal p1 = new Docente("Nombre1", "Apellido1", 1, Cargo.ADG);
+//        Personal p2 = new Docente("Nombre2", "Apellido2", 2, Cargo.ADG);
+//        Personal p3 = new Docente("Nombre3", "Apellido3", 1, Cargo.ADG);
+//        
+//        Personal p4 = new NoDocente("Nombre4", "Apellido4", 4, "4");
+//        Personal p5 = new NoDocente("Nombre5", "Apellido5", 5, "5");
+//        Personal p6 = new NoDocente("Nombre6", "Apellido6", 4, "6");
+//        
+//        Personal p7 = new Docente("Nombre7", "Apellido7", 4, Cargo.ADG);
+//        Personal p8 = new NoDocente("Nombre8", "Apellido8", 1, "8");
+//        
+//        Personal p9 = new NoDocente("Nombre9", "Apellido9", 9, "4");
+//***
 //        if(p1.equals(p4))
 //            System.out.println("son iguales");
         
@@ -157,27 +157,30 @@ public class Principal1 {
 //        }
 
 //        Docente.prueba();
-        IGestorRecursos gr = GestorRecursos2.instanciar();
-        String resultado = gr.nuevoRecurso("Ventilador");
-        if (resultado.equals(IGestorRecursos.EXITO)) {
-            ////
-        }
-        else if (resultado.equals(IGestorRecursos.RECURSO_DUPLICADO)) {
-            //
-        }
-        else {
-            //
-        }
-        
-        System.out.println(gr.nuevoRecurso(""));
-        System.out.println(gr.nuevoRecurso(null));
-        System.out.println(gr.nuevoRecurso("Ventilador"));
-        System.out.println(gr.nuevoRecurso("Pizarrón"));
-        gr.mostrarRecursos();
+
+//        IGestorRecursos gr = GestorRecursos2.instanciar();
+//        String resultado = gr.nuevoRecurso("Ventilador");
+//        if (resultado.equals(IGestorRecursos.EXITO)) {
+//            ////
+//        }
+//        else if (resultado.equals(IGestorRecursos.RECURSO_DUPLICADO)) {
+//            //
+//        }
+//        else {
+//            //
+//        }
+//        
+//        System.out.println(gr.nuevoRecurso(""));
+//        System.out.println(gr.nuevoRecurso(null));
+//        System.out.println(gr.nuevoRecurso("Ventilador"));
+//        System.out.println(gr.nuevoRecurso("Pizarrón"));
+//        gr.mostrarRecursos();
 //        
 //        GestorRecursos gr2 = GestorRecursos.instanciar();
 //        System.out.println(gr2.crearRecurso("Ventilador"));
 //        gr2.mostrarRecursos();
+
+        Ventana v = new Ventana();
     }
 
     public static void asignarLookAndFeel(String laf) {
