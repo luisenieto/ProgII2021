@@ -180,7 +180,7 @@ public class Principal1 {
 //        System.out.println(gr2.crearRecurso("Ventilador"));
 //        gr2.mostrarRecursos();
 
-        Ventana v = new Ventana();
+        IControlador c = Controlador1.instanciar();
     }
 
     public static void asignarLookAndFeel(String laf) {
