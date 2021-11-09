@@ -11,7 +11,7 @@ import java.util.Objects;
  *
  * @author root
  */
-public class Recurso {
+public class Recurso implements Comparable<Recurso> {
     private String nombre;
 
     public Recurso(String nombre) {
@@ -24,6 +24,23 @@ public class Recurso {
 
     public void asignarNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+//    @Override
+//    public int compareTo(Object r) {
+//        if (r instanceof Recurso) {
+//            Recurso r2 = (Recurso)r;
+//            return this.nombre.compareTo(r2.nombre);
+//        }
+//        else
+//            return 0;
+//    }
+    
+    
+
+    @Override
+    public int compareTo(Recurso r) {
+        return r.nombre.compareTo(this.nombre);
     }
     
     

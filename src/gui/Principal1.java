@@ -5,15 +5,13 @@
  */
 package gui;
 
-import interfaces.IGestorRecursos;
+import espacios.modelos.Espacio;
+import espacios.modelos.NombreComparator;
+import espacios.modelos.CapacidadComparator;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import javax.swing.UIManager;
-import personas.modelos.Cargo;
-import personas.modelos.Docente;
-import personas.modelos.NoDocente;
-import personas.modelos.Personal;
-import recursos.modelos.GestorRecursos2;
-import recursos.modelos.Recurso;
 
 /**
  *
@@ -23,8 +21,9 @@ public class Principal1 {
     public static void main(String[] args) {
 //        ArrayList<Docente> docentes = new ArrayList<>();
 //        ArrayList<NoDocente> nodocentes = new ArrayList<>();
-        ArrayList<Personal> personal = new ArrayList<>();
-        ArrayList<Recurso> recursos = new ArrayList<>();
+//        ArrayList<Personal> personal = new ArrayList<>();
+//        ArrayList<Recurso> recursos = new ArrayList<>();
+        List<Espacio> espacios = new ArrayList<>();
         
         
         
@@ -158,13 +157,17 @@ public class Principal1 {
 
 //        Docente.prueba();
 
-//        IGestorRecursos gr = GestorRecursos2.instanciar();
-//        String resultado = gr.nuevoRecurso("Ventilador");
+//        IGestorRecursos gr = GestorRecursos.instanciar();
+//        String resultado = null;
+//        System.out.println(gr.nuevoRecurso("Aire acondicionado"));
+//        System.out.println(gr.nuevoRecurso("Ventilador"));
+//        System.out.println(gr.nuevoRecurso("Ventilador"));
+        
 //        if (resultado.equals(IGestorRecursos.EXITO)) {
 //            ////
 //        }
 //        else if (resultado.equals(IGestorRecursos.RECURSO_DUPLICADO)) {
-//            //
+////            //
 //        }
 //        else {
 //            //
@@ -180,7 +183,23 @@ public class Principal1 {
 //        System.out.println(gr2.crearRecurso("Ventilador"));
 //        gr2.mostrarRecursos();
 
-        IControlador c = Controlador1.instanciar();
+//        IControlador c = Controlador1.instanciar();
+
+//        List<String> lista = new ArrayList<>();
+//        List<LocalDate> lista2 = new ArrayList<>();
+//        lista.add("Mundo");
+//        lista.add("Hola");
+//        Collections.sort(lista);
+//        for(String cadena : lista)
+//            System.out.println(cadena);
+
+          Espacio e1 = new Espacio("A1", 500, "Anfiteatro", true);
+          Espacio e2 = new Espacio("1-3-14", 50, "Aula", true);
+          espacios.add(e1);
+          espacios.add(e2);
+          Collections.sort(espacios, new CapacidadComparator());
+          for(Espacio e : espacios)
+              e.mostrar();
     }
 
     public static void asignarLookAndFeel(String laf) {

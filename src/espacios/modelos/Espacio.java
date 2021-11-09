@@ -15,7 +15,7 @@ import recursos.modelos.Recurso;
  *
  * @author root
  */
-public class Espacio {
+public class Espacio implements Comparable<Espacio> {
     private String nombre;
     private int capacidad;
     private String tipo;
@@ -50,6 +50,8 @@ public class Espacio {
     public String verNombre() {
         return nombre;
     }
+    
+    
 
     /**
         Este método permite asignarle el nombre a un espacio
@@ -63,11 +65,11 @@ public class Espacio {
      * Devuelve la capacidad de un espacio
      * @return entero que representa la capacidad de un espacio
      */
-    public int getCapacidad() {
+    public int verCapacidad() {
         return capacidad;
     }
 
-    public void setCapacidad(int capacidad) {
+    public void asignarCapacidad(int capacidad) {
         this.capacidad = capacidad;
     }
 
@@ -153,4 +155,10 @@ public class Espacio {
     public static void prueba(int x, int y) {
         
     }
+
+    @Override
+    public int compareTo(Espacio e) {
+        return this.nombre.compareTo(e.nombre);
+    }
+            
 }

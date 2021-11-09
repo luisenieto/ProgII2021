@@ -7,13 +7,18 @@ package recursos.modelos;
 
 import interfaces.IGestorRecursos;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 /**
  *
  * @author root
  */
 public class GestorRecursos implements IGestorRecursos {
-    private ArrayList<Recurso> recursos = new ArrayList<>();
+//    private ArrayList<Recurso> recursos = new ArrayList<>();
+//    private LinkedList<Recurso> recursos = new LinkedList<>();
+    private List<Recurso> recursos = new ArrayList<>();
+//    private Set<Recurso> recursos = new HashSet<>();
     private static GestorRecursos instancia;
     
     private GestorRecursos() {
@@ -45,14 +50,15 @@ public class GestorRecursos implements IGestorRecursos {
 
     @Override
     public void mostrarRecursos() {
+        Collections.sort(this.recursos);
         System.out.println("Recursos");
         System.out.println("--------");
-        for(int i = 0; i < this.recursos.size(); i++) {
-            Recurso r = this.recursos.get(i);
-            r.mostrar();
-        }
-//        for(Recurso r : this.recursos)
+//        for(int i = 0; i < this.recursos.size(); i++) {
+//            Recurso r = this.recursos.get(i);
 //            r.mostrar();
+//        }
+        for(Recurso r : this.recursos)
+            r.mostrar();
     }
     
 }
