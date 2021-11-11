@@ -3,11 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/root/Documentos/UNT/Programación%20II/Ejemplos/ProgII2021/src/gui/Controlador1.java</file>
+            <file>file:/root/Documentos/UNT/Programación%20II/Ejemplos/ProgII2021/src/espacios/modelos/Espacio.java</file>
             <file>file:/root/Documentos/UNT/Programación%20II/Ejemplos/ProgII2021/src/gui/Principal1.java</file>
-            <file>file:/root/Documentos/UNT/Programación%20II/Ejemplos/ProgII2021/src/gui/IControlador.java</file>
-            <file>file:/root/Documentos/UNT/Programación%20II/Ejemplos/ProgII2021/src/gui/Controlador2.java</file>
-            <file>file:/root/Documentos/UNT/Programación%20II/Ejemplos/ProgII2021/src/gui/Ventana.java</file>
+            <file>file:/root/Documentos/UNT/Programación%20II/Ejemplos/ProgII2021/src/espacios/modelos/NombreComparator.java</file>
+            <file>file:/root/Documentos/UNT/Programación%20II/Ejemplos/ProgII2021/src/recursos/modelos/Recurso.java</file>
+            <file>file:/root/Documentos/UNT/Programación%20II/Ejemplos/ProgII2021/src/recursos/modelos/GestorRecursos.java</file>
+            <file>file:/root/Documentos/UNT/Programación%20II/Ejemplos/ProgII2021/src/espacios/modelos/CapacidadComparator.java</file>
         </group>
     </open-files>
 </project-private>

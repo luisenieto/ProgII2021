@@ -6,10 +6,11 @@
 package gui;
 
 import espacios.modelos.Espacio;
-import espacios.modelos.NombreComparator;
-import espacios.modelos.CapacidadComparator;
+import espacios.modelos.GestorEspacios;
+//import espacios.modelos.CapacidadComparator;
+import interfaces.IGestorEspacios;
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import javax.swing.UIManager;
 
@@ -193,13 +194,37 @@ public class Principal1 {
 //        for(String cadena : lista)
 //            System.out.println(cadena);
 
-          Espacio e1 = new Espacio("A1", 500, "Anfiteatro", true);
-          Espacio e2 = new Espacio("1-3-14", 50, "Aula", true);
-          espacios.add(e1);
-          espacios.add(e2);
-          Collections.sort(espacios, new CapacidadComparator());
-          for(Espacio e : espacios)
-              e.mostrar();
+//          Espacio e1 = new Espacio("A1", 500, "Anfiteatro", true);
+//          Espacio e2 = new Espacio("1-3-14", 50, "Aula", true);
+//          espacios.add(e1);
+//          espacios.add(e2);
+//          Collections.sort(espacios, new CapacidadComparator());
+//          
+//          for(Espacio e : espacios)
+//              e.mostrar();
+          
+          IGestorEspacios ge = GestorEspacios.instanciar();
+          ge.nuevoEspacio("A1", 500, "Anfiteatro", true);
+          ge.nuevoEspacio("1-3-14", 50, "Aula", true);
+          
+//          Comparator<Espacio> cmp1 = new Comparator<Espacio>() {
+//                @Override
+//                public int compare(Espacio e1, Espacio e2) {
+//                    return e1.verNombre().compareTo(e2.verNombre());
+//                } 
+//          };
+//          
+//          Comparator<Espacio> cmp2 = new Comparator<Espacio>() {
+//                @Override
+//                public int compare(Espacio e1, Espacio e2) {
+//                    return e2.verCapacidad() - e1.verCapacidad();
+//                } 
+//          };
+          
+            Comparator<Espacio> cmp1 = (e1, e2) -> e1.verNombre().compareTo(e2.verNombre());
+            Comparator<Espacio> cmp2 = (e1, e2) -> e2.verCapacidad() - e1.verCapacidad();
+          
+            ge.mostrarEspacios(cmp2);
     }
 
     public static void asignarLookAndFeel(String laf) {
