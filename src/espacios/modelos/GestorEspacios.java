@@ -6,6 +6,7 @@
 package espacios.modelos;
 
 import interfaces.IGestorEspacios;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -52,5 +53,44 @@ public class GestorEspacios implements IGestorEspacios {
         for(Espacio e : this.espacios)
             e.mostrar();
     }
+ 
+    @Override
+    public Espacio obtenerEspacio(int pos) throws IOException, InterruptedException {
+//        try {
+            //
+            //
+            return this.espacios.get(pos);
+            //
+            //
+            //
+//        }
+//        catch(ClassCastException e) {
+//            return null;
+//        }
+//        catch(IndexOutOfBoundsException e) {
+//            return null;
+//        }
+//        finally {
+            //
+            //
+            //            
+//        }
+        //
+        //
+        //
+    }
+
+    @Override
+    public void m3() throws IOException {
+        throw new UnsupportedOperationException("Not supported yet."); 
+    }
+
+    @Override
+    public void m4() throws IOException {
+        m3();        
+    }
+    
+    
+    
     
 }

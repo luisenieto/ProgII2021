@@ -6,6 +6,7 @@
 package interfaces;
 
 import espacios.modelos.Espacio;
+import java.io.IOException;
 import java.util.Comparator;
 
 /**
@@ -21,4 +22,7 @@ public interface IGestorEspacios {
     
     public abstract String nuevoEspacio(String nombre, int capacidad, String tipo, boolean habilitado);
     public abstract void mostrarEspacios(Comparator<Espacio> cmp);
+    public abstract Espacio obtenerEspacio(int pos) throws IOException, InterruptedException;
+    public abstract void m3() throws IOException;
+    public abstract void m4() throws IOException;
 }

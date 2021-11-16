@@ -9,8 +9,8 @@ import espacios.modelos.Espacio;
 import espacios.modelos.GestorEspacios;
 //import espacios.modelos.CapacidadComparator;
 import interfaces.IGestorEspacios;
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 import javax.swing.UIManager;
 
@@ -19,7 +19,7 @@ import javax.swing.UIManager;
  * @author root
  */
 public class Principal1 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 //        ArrayList<Docente> docentes = new ArrayList<>();
 //        ArrayList<NoDocente> nodocentes = new ArrayList<>();
 //        ArrayList<Personal> personal = new ArrayList<>();
@@ -221,10 +221,27 @@ public class Principal1 {
 //                } 
 //          };
           
-            Comparator<Espacio> cmp1 = (e1, e2) -> e1.verNombre().compareTo(e2.verNombre());
-            Comparator<Espacio> cmp2 = (e1, e2) -> e2.verCapacidad() - e1.verCapacidad();
-          
-            ge.mostrarEspacios(cmp2);
+//            Comparator<Espacio> cmp1 = (e1, e2) -> e1.verNombre().compareTo(e2.verNombre());
+//            Comparator<Espacio> cmp2 = (e1, e2) -> e2.verCapacidad() - e1.verCapacidad();
+//          
+//            ge.mostrarEspacios(cmp2);
+        try {
+            Espacio e = ge.obtenerEspacio(10);
+        }
+        catch(IOException | InterruptedException e1) {
+            //
+        }
+//        if (e == null)
+//            System.out.println("null");
+//        try {
+//            e.mostrar();
+//        }
+//        catch(NullPointerException e1) {
+//            
+//        }
+        
+        ge.m4();
+        
     }
 
     public static void asignarLookAndFeel(String laf) {
