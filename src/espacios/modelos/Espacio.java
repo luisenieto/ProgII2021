@@ -18,98 +18,48 @@ import recursos.modelos.Recurso;
 public class Espacio implements Comparable<Espacio> {
     private String nombre;
     private int capacidad;
-    private String tipo;
-    private boolean habilitado;
-    private ArrayList<Composicion> composiciones = new ArrayList<>();
+    private Tipo tipo;
 
-    public Espacio(String nombre, int capacidad, String tipo, boolean habilitado) {
+    public Espacio(String nombre, int capacidad, Tipo tipo) {
         this.nombre = nombre;
         this.capacidad = capacidad;
         this.tipo = tipo;
-        this.habilitado = habilitado;
-    }
-    
-    public Espacio(String n, int c, boolean h) {
-        this(n, c, "Aula", h);        
-    }
-    
-    public Espacio(String n, int c, String t) {
-        this(n, c, t, true);
-    }    
-    
-    
-    
-    
-    private boolean validarNombre(String n) {
-        if (n.isEmpty())
-            return false;
-        else
-            return true;
     }
 
-    public String verNombre() {
+    public String getNombre() {
         return nombre;
     }
-    
-    
 
-    /**
-        Este método permite asignarle el nombre a un espacio
-     *  @param nombre nombre representa el nombre del espacio
-    */
-    public void asignarNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    /**
-     * Devuelve la capacidad de un espacio
-     * @return entero que representa la capacidad de un espacio
-     */
-    public int verCapacidad() {
+    public int getCapacidad() {
         return capacidad;
     }
 
-    public void asignarCapacidad(int capacidad) {
-        this.capacidad = capacidad;
-    }
-
-    public String getTipo() {
+    public Tipo getTipo() {
         return tipo;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-
-    public boolean isHabilitado() {
-        return habilitado;
-    }
-
-    public void setHabilitado(boolean habilitado) {
-        this.habilitado = habilitado;
-    }
-    
     public void mostrar() {
         System.out.println(this.nombre + ", " + this.capacidad + ", " + this.tipo);
     }
+
     
-    public void mostrar(boolean mostrarHabilitado) {
-        if (mostrarHabilitado)
-            System.out.println(nombre + ", " + capacidad + ", " + tipo + ", habilitado: " + habilitado);
-        else
-            this.mostrar();
-    }
-    
-    public void agregarRecurso(Recurso r, int cantidad) {
-        Composicion c = new Composicion(r, cantidad);
-        this.composiciones.add(c);
+    @Override
+    public int compareTo(Espacio e) {
+//        return e.nombre.compareTo(this.nombre);
+//        return this.capacidad - e.capacidad;
+        return this.tipo.toString().compareTo(e.tipo.toString());
     }
 
+    
+
+    
+  
+    
+    
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 29 * hash + Objects.hashCode(this.nombre);
-        hash = 29 * hash + Objects.hashCode(this.tipo);
+        int hash = 7;
+        hash = 59 * hash + Objects.hashCode(this.nombre);
         return hash;
     }
 
@@ -128,37 +78,8 @@ public class Espacio implements Comparable<Espacio> {
         if (!Objects.equals(this.nombre, other.nombre)) {
             return false;
         }
-        if (!Objects.equals(this.tipo, other.tipo)) {
-            return false;
-        }
         return true;
     }
     
-    public String nuevoTurno(LocalDateTime desde, LocalDateTime hasta, Docente d) {
-        if (this.habilitado) { //el espacio está habilitado
-            //
-            return "Se creó un nuevo turno";
-        }
-        else
-            return "No se puede crear un turno porque está deshabilitado";
-    }
     
-    public static void prueba() {
-        
-    }
-    
-    public static void prueba(int x) {
-        
-    }
-    
-    
-    public static void prueba(int x, int y) {
-        
-    }
-
-    @Override
-    public int compareTo(Espacio e) {
-        return this.nombre.compareTo(e.nombre);
-    }
-            
 }

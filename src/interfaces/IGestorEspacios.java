@@ -6,7 +6,7 @@
 package interfaces;
 
 import espacios.modelos.Espacio;
-import java.io.IOException;
+import espacios.modelos.Tipo;
 import java.util.Comparator;
 
 /**
@@ -14,15 +14,15 @@ import java.util.Comparator;
  * @author root
  */
 public interface IGestorEspacios {
-    public static final String ERROR_NOMBRE = "El nombre del espacio es inválido";
-    public static final String ERROR_CAPACIDAD = "La capacidad del espacio es inválida";
-    public static final String ERROR_TIPO = "El tipo de espacio es inválido";
-    public static final String EXITO = "Espacio creado";
-    public static final String DUPLICADO = "Ya existe ese espacio";
+    public static final String OK = "Espacio creado correctamente";
+    public static final String REPETIDO = "No se puede crear el espacio porque ya existe otro con el mismo nombre";    
+    public static final String ESCRITURA_ERROR = "Error al guardar los espacios";
+    public static final String ESCRITURA_OK = "Se pudieron guardar los espacios";   
+    public static final String LECTURA_ERROR = "Error al leer los espacios";
+    public static final String LECTURA_OK = "Se pudieron leer los espacios";    
+    public static final String CREACION_ERROR = "Error al crear el archivo de espacios";
     
-    public abstract String nuevoEspacio(String nombre, int capacidad, String tipo, boolean habilitado);
-    public abstract void mostrarEspacios(Comparator<Espacio> cmp);
-    public abstract Espacio obtenerEspacio(int pos) throws IOException, InterruptedException;
-    public abstract void m3() throws IOException;
-    public abstract void m4() throws IOException;
+    public String nuevoEspacio(String nombre, int capacidad, Tipo tipo);
+    public void mostrarEspacios();
+    public void mostrarEspacios(Comparator<Espacio> cmp);
 }

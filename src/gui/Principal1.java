@@ -203,9 +203,9 @@ public class Principal1 {
 //          for(Espacio e : espacios)
 //              e.mostrar();
           
-          IGestorEspacios ge = GestorEspacios.instanciar();
-          ge.nuevoEspacio("A1", 500, "Anfiteatro", true);
-          ge.nuevoEspacio("1-3-14", 50, "Aula", true);
+//          IGestorEspacios ge = GestorEspacios.instanciar();
+//          ge.nuevoEspacio("A1", 500, "Anfiteatro", true);
+//          ge.nuevoEspacio("1-3-14", 50, "Aula", true);
           
 //          Comparator<Espacio> cmp1 = new Comparator<Espacio>() {
 //                @Override
@@ -225,12 +225,7 @@ public class Principal1 {
 //            Comparator<Espacio> cmp2 = (e1, e2) -> e2.verCapacidad() - e1.verCapacidad();
 //          
 //            ge.mostrarEspacios(cmp2);
-        try {
-            Espacio e = ge.obtenerEspacio(10);
-        }
-        catch(IOException | InterruptedException e1) {
-            //
-        }
+        
 //        if (e == null)
 //            System.out.println("null");
 //        try {
@@ -240,7 +235,7 @@ public class Principal1 {
 //            
 //        }
         
-        ge.m4();
+      
         
     }
 
